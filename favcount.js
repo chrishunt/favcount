@@ -17,15 +17,28 @@
 
   Favcount.prototype.set = function(count) {
     var self = this,
-        img = document.createElement('img');
+        img  = document.createElement('img');
 
     if (self.canvas.getContext) {
-           if (count < 1)  { count = '' }
-      else if (count < 10) { count = ' ' + count }
-      else if (count > 99) { count = '99' }
+      img.onload = function() {
+        drawCanvas(self.canvas, img, normalize(count));
+      };
 
-      img.onload = function() { drawCanvas(self.canvas, img, count); };
       img.src = this.icon;
+    }
+  }
+
+  function normalize(count) {
+    count = Math.round(count);
+
+    if (isNaN(count) || count < 1) {
+      return '';
+    } else if (count < 10) {
+      return ' ' + count;
+    } else if (count > 99) {
+      return '99';
+    } else {
+      return count;
     }
   }
 
