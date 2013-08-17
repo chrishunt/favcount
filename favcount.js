@@ -17,7 +17,8 @@
 
   Favcount.prototype.set = function(count) {
     var favcount = this,
-        img = $('<img />')[0],
+        img = document.createElement('img'),
+        link = document.createElement('link'),
         multiplier, fontSize, context, xOffset, yOffset;
 
     if (favcount.canvas.getContext) {
@@ -25,7 +26,7 @@
       else if (count < 10) { count = ' ' + count }
       else if (count > 99) { count = '99' }
 
-      img.onload = function () {
+      img.onload = function() {
         favcount.canvas.height = favcount.canvas.width = this.width;
         multiplier = (this.width / 16);
 
@@ -46,12 +47,13 @@
         context.fillStyle = '#000';
         context.fillText(count, xOffset + 1, yOffset + 1);
 
-        $('link[rel$=icon]').remove();
-        $('head').append(
-          $('<link rel="shortcut icon" type="image/x-icon"/>').attr(
-            'href', favcount.canvas.toDataURL('image/png')
-          )
+        document.getElementsByTagName('head')[0].removeChild(
+          document.querySelector('link[rel$=icon]')
         );
+
+        link.rel = 'shortcut icon';
+        link.href = favcount.canvas.toDataURL('image/png');
+        document.getElementsByTagName('head')[0].appendChild(link);
       };
 
       img.src = this.icon;
