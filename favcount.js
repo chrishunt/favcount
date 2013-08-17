@@ -13,8 +13,6 @@
     this.canvas = document.createElement('canvas');
   }
 
-  Favcount.VERSION = '1.0.0';
-
   Favcount.prototype.set = function(count) {
     var self = this,
         img  = document.createElement('img');
@@ -76,4 +74,8 @@
   }
 
   this.Favcount = Favcount;
+}).call(this);
+
+(function(){
+  Favcount.VERSION = '1.0.0';
 }).call(this);
