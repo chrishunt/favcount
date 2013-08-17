@@ -1,33 +1,39 @@
-/**
-* jQuery Favicon Notify
-*
-* Updates the favicon with a number to notify the user of changes.
-*
-* iconUrl: Url of favicon image or icon
-* count:   Integer count to place above favicon
-*
-* $.faviconNotify(iconUrl, count)
-*/
-(function($){
-  $.faviconNotify = function(iconUrl, count){
-    var canvas = canvas || $('<canvas />')[0],
+/*
+ * favcount.js v1.0.0
+ * http://blahblah.com
+ * Updates the favicon with a number
+ *
+ * Copyright 2013, Chris Hunt
+ * Released under the MIT license.
+ */
+
+(function(){
+  function Favcount(icon) {
+    this.icon = icon;
+    this.canvas = document.createElement('canvas');
+  }
+
+  Favcount.VERSION = '1.0.0';
+
+  Favcount.prototype.set = function(count) {
+    var favcount = this,
         img = $('<img />')[0],
         multiplier, fontSize, context, xOffset, yOffset;
 
-    if (canvas.getContext) {
+    if (favcount.canvas.getContext) {
            if (count < 1)  { count = '' }
       else if (count < 10) { count = ' ' + count }
       else if (count > 99) { count = '99' }
 
       img.onload = function () {
-        canvas.height = canvas.width = this.width;
+        favcount.canvas.height = favcount.canvas.width = this.width;
         multiplier = (this.width / 16);
 
         fontSize = multiplier * 11;
         xOffset  = multiplier;
         yOffset  = multiplier * 11;
 
-        context = canvas.getContext('2d');
+        context = favcount.canvas.getContext('2d');
         context.drawImage(this, 0, 0);
         context.font = 'bold ' + fontSize + 'px "helvetica", sans-serif';
 
@@ -43,11 +49,14 @@
         $('link[rel$=icon]').remove();
         $('head').append(
           $('<link rel="shortcut icon" type="image/x-icon"/>').attr(
-            'href', canvas.toDataURL('image/png')
+            'href', favcount.canvas.toDataURL('image/png')
           )
         );
       };
-      img.src = iconUrl;
+
+      img.src = this.icon;
     }
-  };
-})(jQuery);
+  }
+
+  this.Favcount = Favcount;
+}).call(this);
