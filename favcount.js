@@ -45,7 +45,7 @@
         favicon = document.createElement('link'),
         multiplier, fontSize, context, xOffset, yOffset;
 
-    favicon.rel = 'shortcut icon';
+    favicon.rel = 'icon';
 
     // Scale the canvas based on favicon size
     multiplier = img.width / 16;
@@ -72,7 +72,7 @@
 
     // Replace the favicon
     favicon.href = canvas.toDataURL('image/png');
-    head.removeChild(document.querySelector('link[rel$=icon]'));
+    head.removeChild(document.querySelector('link[rel=icon]'));
     head.appendChild(favicon);
   }
 
