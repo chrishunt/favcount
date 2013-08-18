@@ -40,9 +40,19 @@
         </p>
 
         <pre class='prettyprint lang-javascript'>
-var icon = new Favcount('path/to/favicon.ico');
+var favicon = new Favcount('path/to/favicon.ico');
 
-icon.set(10);</pre>
+favicon.set(10);</pre>
+
+        <p>
+          If you get tired of numbers or want to make that favicon really pop,
+          change it out to something else.
+        </p>
+
+        <pre class='prettyprint lang-javascript'>
+favicon.icon = 'path/to/different/icon.ico';
+
+favicon.set();</pre>
 
         <h2>Example</h2>
         <p>
@@ -51,12 +61,12 @@ icon.set(10);</pre>
         </p>
 
         <pre class='prettyprint lang-javascript'>
-var icon = new Favcount('icons/blue-dot.ico');
+var favicon = new Favcount('icons/blue-dot.ico');
 
 function setCount(count) {
   if (count > 99) { count = 1 };
 
-  icon.set(count);
+  favicon.set(count);
 
   setTimeout(function() {
     setCount(count + 1);
