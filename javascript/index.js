@@ -1,4 +1,4 @@
-var icon = new Favcount('icons/red-dot.ico');
+var icon = new Favcount('icons/blue.ico');
 
 function setCount(count) {
   if (count > 99) { count = 1 };
