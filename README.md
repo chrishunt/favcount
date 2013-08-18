@@ -35,8 +35,8 @@ favicon.set();
 
 ## Example
 
-Have a look at the favicon for the home page. Notice how amazing it is? Here's
-the code.
+Have a look at the favicon for the [home page](http://chrishunt.co/favcount).
+Notice how amazing it is? Here's the code.
 
 ```javascript
 var favicon = new Favcount('icons/blue-dot.ico');
