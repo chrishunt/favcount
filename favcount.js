@@ -1,7 +1,7 @@
 /*
  * favcount.js v1.0.0
  * http://blahblah.com
- * Updates the favicon with a number
+ * Dynamically updates the favicon with a number.
  *
  * Copyright 2013, Chris Hunt
  * Released under the MIT license
