@@ -1,5 +1,8 @@
-# favcount.js
+# [favcount.js](http://chrishunt.co/favcount)
+
 Enhance your useless favicon with **FavCount&trade;** technology.
+
+[chrishunt.co/favcount](http://chrishunt.co/favcount)
 
 ## Usage
 
