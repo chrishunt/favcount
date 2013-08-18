@@ -47,7 +47,8 @@
 
     favicon.rel = 'shortcut icon';
 
-    multiplier = (img.width / 16);
+    // Scale the canvas based on favicon size
+    multiplier = img.width / 16;
     fontSize   = multiplier * 11;
     xOffset    = multiplier;
     yOffset    = multiplier * 11;
@@ -58,17 +59,19 @@
     context.drawImage(img, 0, 0);
     context.font = 'bold ' + fontSize + 'px "helvetica", sans-serif';
 
+    // Draw background for contrast
     context.fillStyle = '#FFF';
     context.fillText(count, xOffset, yOffset);
     context.fillText(count, xOffset + 2, yOffset);
     context.fillText(count, xOffset, yOffset + 2);
     context.fillText(count, xOffset + 2, yOffset + 2);
 
+    // Draw count in foreground
     context.fillStyle = '#000';
     context.fillText(count, xOffset + 1, yOffset + 1);
 
+    // Replace the favicon
     favicon.href = canvas.toDataURL('image/png');
-
     head.removeChild(document.querySelector('link[rel$=icon]'));
     head.appendChild(favicon);
   }
