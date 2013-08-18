@@ -1,6 +1,6 @@
 /*
- * favcount.js v1.0.0
- * http://blahblah.com
+ * favcount.js v1.0.1
+ * http://chrishunt.co/favcount
  * Dynamically updates the favicon with a number.
  *
  * Copyright 2013, Chris Hunt
@@ -45,7 +45,7 @@
         favicon = document.createElement('link'),
         multiplier, fontSize, context, xOffset, yOffset;
 
-    favicon.rel = 'shortcut icon';
+    favicon.rel = 'icon';
 
     // Scale the canvas based on favicon size
     multiplier = img.width / 16;
@@ -72,7 +72,7 @@
 
     // Replace the favicon
     favicon.href = canvas.toDataURL('image/png');
-    head.removeChild(document.querySelector('link[rel$=icon]'));
+    head.removeChild(document.querySelector('link[rel=icon]'));
     head.appendChild(favicon);
   }
 
@@ -80,5 +80,5 @@
 }).call(this);
 
 (function(){
-  Favcount.VERSION = '1.0.0';
+  Favcount.VERSION = '1.0.1';
 }).call(this);
