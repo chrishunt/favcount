@@ -6,11 +6,11 @@ Enhance your useless favicon with **FavCount&trade;** technology.
 Load up `favcount.js` in your HTML.
 
 ```html
-&lt;body&gt;
+<body>
   ...
-  &lt;!-- bottom of body --&gt;
-  &lt;script src='favcount.js' type='text/javascript'&gt;&lt;/script&gt;
-&lt;/body&gt;
+  <!-- bottom of body -->
+  <script src='favcount.js' type='text/javascript'></script>
+</body>
 ```
 
 Create and use a `Favcount` in your JavaScript.
