@@ -1,6 +1,6 @@
 /*
  * favcount.js v1.0.0
- * http://blahblah.com
+ * http://chrishunt.co/favcount
  * Dynamically updates the favicon with a number.
  *
  * Copyright 2013, Chris Hunt
