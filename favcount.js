@@ -4,7 +4,7 @@
  * Updates the favicon with a number
  *
  * Copyright 2013, Chris Hunt
- * Released under the MIT license.
+ * Released under the MIT license
  */
 
 (function(){
