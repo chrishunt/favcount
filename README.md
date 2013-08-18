@@ -9,11 +9,17 @@ Enhance your useless favicon with **FavCount&trade;** technology.
 Load up `favcount.js` in your HTML.
 
 ```html
-<body>
-  ...
-  <!-- bottom of body -->
-  <script src='favcount.js' type='text/javascript'></script>
-</body>
+<html>
+  <head>
+    <link rel='icon' type='image/png' href='path/to/favicon.ico'>
+  </head>
+
+  <body>
+    ...
+    <!-- bottom of body -->
+    <script src='favcount.js' type='text/javascript'></script>
+  </body>
+</html>
 ```
 
 Create and use a `Favcount` in your JavaScript.
