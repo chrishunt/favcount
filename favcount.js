@@ -1,5 +1,5 @@
 /*
- * favcount.js v1.0.0
+ * favcount.js v1.0.1
  * http://chrishunt.co/favcount
  * Dynamically updates the favicon with a number.
  *
@@ -80,5 +80,5 @@
 }).call(this);
 
 (function(){
-  Favcount.VERSION = '1.0.0';
+  Favcount.VERSION = '1.0.1';
 }).call(this);
