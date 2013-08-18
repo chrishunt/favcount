@@ -50,7 +50,7 @@
     // Scale the canvas based on favicon size
     multiplier = img.width / 16;
     fontSize   = multiplier * 11;
-    xOffset    = multiplier;
+    xOffset    = multiplier + 0.5;
     yOffset    = multiplier * 11;
 
     canvas.height = canvas.width = img.width;
