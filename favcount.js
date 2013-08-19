@@ -43,15 +43,16 @@
   function drawCanvas(canvas, img, count) {
     var head = document.getElementsByTagName('head')[0],
         favicon = document.createElement('link'),
-        multiplier, fontSize, context, xOffset, yOffset;
+        multiplier, fontSize, context, xOffset, yOffset, border;
 
     favicon.rel = 'icon';
 
-    // Scale the canvas based on favicon size
+    // Scale canvas elements based on favicon size
     multiplier = img.width / 16;
     fontSize   = multiplier * 11;
     xOffset    = multiplier;
     yOffset    = multiplier * 11;
+    border     = multiplier;
 
     canvas.height = canvas.width = img.width;
 
@@ -62,13 +63,16 @@
     // Draw background for contrast
     context.fillStyle = '#FFF';
     context.fillText(count, xOffset, yOffset);
-    context.fillText(count, xOffset + 2, yOffset);
-    context.fillText(count, xOffset, yOffset + 2);
-    context.fillText(count, xOffset + 2, yOffset + 2);
+    context.fillText(count, xOffset + border, yOffset);
+    context.fillText(count, xOffset, yOffset + border);
+    context.fillText(count, xOffset + border, yOffset + border);
 
     // Draw count in foreground
     context.fillStyle = '#000';
-    context.fillText(count, xOffset + 1, yOffset + 1);
+    context.fillText(count,
+      xOffset + (border / 2.0),
+      yOffset + (border / 2.0)
+    );
 
     // Replace the favicon
     favicon.href = canvas.toDataURL('image/png');
