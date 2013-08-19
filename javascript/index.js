@@ -1,3 +1,5 @@
+prettyPrint();
+
 var favicon = new Favcount('icons/blue-dot.ico');
 
 function setCount(count) {
