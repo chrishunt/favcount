@@ -56,12 +56,13 @@
     shadow     = multiplier * 2;
 
     canvas.height = canvas.width = img.width;
-
     context = canvas.getContext('2d');
-    context.drawImage(img, 0, 0);
     context.font = 'bold ' + fontSize + 'px "helvetica", sans-serif';
 
-    // Draw background for contrast
+    // Draw faded favicon background
+    if (count) { context.globalAlpha = 0.4; }
+    context.drawImage(img, 0, 0);
+    context.globalAlpha = 1.0;
 
     // Draw white drop shadow
     context.shadowColor = '#FFF';
