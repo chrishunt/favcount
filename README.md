@@ -30,11 +30,12 @@ var favicon = new Favcount('path/to/favicon.ico');
 favicon.set(10);
 ```
 
-If you get tired of numbers or want to make that favicon really pop, change it
-out to something else.
+If you want to make that icon really pop, change it out to something else or
+adjust the opacity.
 
 ```javascript
 favicon.icon = 'path/to/different/icon.ico';
+favicon.opacity = 0.5;
 
 favicon.set();
 ```
