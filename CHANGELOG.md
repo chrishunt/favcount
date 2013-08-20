@@ -1,5 +1,10 @@
 # Changelog
 
+##v1.2.0
+*2013-08-19*
+
+- Make opacity an adjustable attribute
+
 ##v1.1.0
 *2013-08-19*
 
