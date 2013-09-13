@@ -12,6 +12,7 @@
     this.icon = icon;
     this.opacity = 0.4;
     this.canvas = document.createElement('canvas');
+    this.font = "Helvetica, Arial, sans-serif";
   }
 
   Favcount.prototype.set = function(count) {
@@ -20,7 +21,7 @@
 
     if (self.canvas.getContext) {
       img.onload = function() {
-        drawCanvas(self.canvas, self.opacity, img, normalize(count));
+        drawCanvas(self.canvas, self.opacity, self.font, img, normalize(count));
       };
 
       img.src = this.icon;
@@ -41,7 +42,7 @@
     }
   }
 
-  function drawCanvas(canvas, opacity, img, count) {
+  function drawCanvas(canvas, opacity, font, img, count) {
     var head = document.getElementsByTagName('head')[0],
         favicon = document.createElement('link'),
         multiplier, fontSize, context, xOffset, yOffset, border, shadow;
@@ -58,7 +59,7 @@
 
     canvas.height = canvas.width = img.width;
     context = canvas.getContext('2d');
-    context.font = 'bold ' + fontSize + 'px "helvetica", sans-serif';
+    context.font = 'bold ' + fontSize + 'px ' + font;
 
     // Draw faded favicon background
     if (count) { context.globalAlpha = opacity; }
