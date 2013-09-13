@@ -12,7 +12,7 @@
     this.icon = icon;
     this.opacity = 0.4;
     this.canvas = document.createElement('canvas');
-    this.font = "Helvetica, Arial, 'sans serif'";
+    this.font = "Helvetica, Arial, sans-serif";
   }
 
   Favcount.prototype.set = function(count) {
@@ -59,7 +59,7 @@
 
     canvas.height = canvas.width = img.width;
     context = canvas.getContext('2d');
-    context.font = 'bold ' + fontSize + 'px' + font;
+    context.font = 'bold ' + fontSize + 'px ' + font;
 
     // Draw faded favicon background
     if (count) { context.globalAlpha = opacity; }
