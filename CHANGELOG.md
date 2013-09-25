@@ -1,5 +1,10 @@
 # Changelog
 
+##v1.3.0
+*2013-09-25*
+
+- Make font-family an adjustable attribute
+
 ##v1.2.0
 *2013-08-19*
 
