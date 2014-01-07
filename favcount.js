@@ -26,7 +26,7 @@
 
       img.src = this.icon;
     }
-  }
+  };
 
   function normalize(count) {
     count = Math.round(count);
