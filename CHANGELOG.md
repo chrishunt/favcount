@@ -1,5 +1,11 @@
 # Changelog
 
+##v1.4.0
+*2014-01-07*
+
+- [#7](https://github.com/chrishunt/favcount/pull/7) Add bower.json
+- [#6](https://github.com/chrishunt/favcount/pull/6) Run jshint: Add missing semicolon
+
 ##v1.3.0
 *2013-09-25*
 

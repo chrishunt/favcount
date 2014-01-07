@@ -1,0 +1,24 @@
+{
+  "name": "favcount",
+  "main": "favcount.js",
+  "version": "1.4.0",
+  "homepage": "https://github.com/chrishunt/favcount",
+  "authors": [
+    "Chris Hunt <chrishunt@github.com>"
+  ],
+  "description": "Enhance your useless favicon with FavCount technology",
+  "keywords": [
+    "favicon",
+    "notification",
+    "numbers",
+    "dynamic"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
