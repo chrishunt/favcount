@@ -1,5 +1,10 @@
 # Changelog
 
+##v1.5.0
+*2014-01-23*
+
+- [#8](https://github.com/chrishunt/favcount/pull/8) Request img anonymously for CORS
+
 ##v1.4.0
 *2014-01-07*
 
