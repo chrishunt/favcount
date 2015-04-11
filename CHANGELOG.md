@@ -1,5 +1,10 @@
 # Changelog
 
+##v1.5.1
+*2015-04-11*
+
+- [#10](https://github.com/chrishunt/favcount/pull/10) Check for existence of link element in HTML
+
 ##v1.5.0
 *2014-01-23*
 
