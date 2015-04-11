@@ -90,7 +90,9 @@
 
     // Replace favicon with new favicon
     favicon.href = canvas.toDataURL('image/png');
-    head.removeChild(document.querySelector('link[rel=icon]'));
+    if (document.querySelector('link[rel=icon]') {
+      head.removeChild(document.querySelector('link[rel=icon]'));
+    }
     head.appendChild(favicon);
   }
 
