@@ -98,5 +98,5 @@
 }).call(this);
 
 (function(){
-  Favcount.VERSION = '1.5.0';
+  Favcount.VERSION = '1.5.1';
 }).call(this);
