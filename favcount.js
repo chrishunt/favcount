@@ -46,10 +46,9 @@
 
   function drawCanvas(canvas, opacity, font, img, count) {
     var head = document.getElementsByTagName('head')[0],
-        favicon = document.createElement('link'),
+        favicon = document.querySelector('link[rel=icon]'),
+        newFavicon = document.createElement('link'),
         multiplier, fontSize, context, xOffset, yOffset, border, shadow;
-
-    favicon.rel = 'icon';
 
     // Scale canvas elements based on favicon size
     multiplier = img.width / 16;
@@ -89,11 +88,10 @@
     );
 
     // Replace favicon with new favicon
-    favicon.href = canvas.toDataURL('image/png');
-    if (document.querySelector('link[rel=icon]') {
-      head.removeChild(document.querySelector('link[rel=icon]'));
-    }
-    head.appendChild(favicon);
+    newFavicon.rel = 'icon';
+    newFavicon.href = canvas.toDataURL('image/png');
+    if (favicon) { head.removeChild(favicon); }
+    head.appendChild(newFavicon);
   }
 
   this.Favcount = Favcount;
